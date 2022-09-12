@@ -1,9 +1,6 @@
 'use strict'
 
-console.log('utils')
-
 function printMat(mat, selector) {
-  console.log('print mat')
   var strHTML = '<table border="0"><tbody>'
   for (var i = 0; i < mat.length; i++) {
     strHTML += '<tr>'

@@ -1,6 +1,10 @@
 body {
+  background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   text-align: center;
-  background-color: lightgrey;
+  background-color: #5a6b3060;
   padding: 10px;
   height: 100vh;
   width: 100vw;
@@ -10,25 +14,50 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+p {
+  margin: 5px 0;
+  padding: 0;
+  color: white;
+  border-radius: 15px;
+  background-color: rgba(140, 52, 52, 0.48);
+  padding: 5px;
+}
+h1 {
+  background-color: rgba(140, 52, 52, 0.48);
+  margin: 5px 0;
+  padding: 5px;
+  color: rgb(216, 216, 216);
 }
 
 .board-container {
   display: flex;
   text-align: center;
   display: inline-block;
-  /* width: 80vh;
-  height: 80vh; */
-  background-color: lightskyblue;
+
+  background-color: #5a6b30bc;
+  /* border-radius: 15px; */
 }
 
 table {
+  /* border-radius: 15px; */
   border-spacing: 0;
-  border: 1px solid;
+  border: 1px solid rgba(255, 255, 255, 0.291);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  /* padding: 3px; */
 }
 
 td {
@@ -37,15 +66,34 @@ td {
 }
 
 .snake {
-  background-color: lightcoral;
+  background-color: rgb(90, 70, 18);
   width: 100%;
   height: 100%;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.head {
+  background-color: rgb(118, 107, 78);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.snake > :nth-child(n + 1) {
+  background-color: aqua;
+}
+
+.food {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
 }
 
 .cell {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   text-align: center;
-  font-size: 1.5em;
-  /* border: 1px solid; */
+  border: 0.5px solid rgba(255, 255, 255, 0.178);
+  padding: 0px;
 }
