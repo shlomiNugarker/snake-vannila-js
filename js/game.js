@@ -69,17 +69,19 @@ function moveSnake() {
       // going down
       nextLocation.i = 0
     }
-    if (nextLocation.j > 14) {
+    if (nextLocation.j > 15) {
       // going right
       nextLocation.j = 0
     }
     if (nextLocation.i < 0) {
       //go up
-      nextLocation.i = 14
+      nextLocation.i = gBoard.length - 1
+      // nextLocation.i = 15
     }
     if (nextLocation.j < 0) {
       // go left
-      nextLocation.j = 14
+      nextLocation.j = gBoard[0].length - 1
+      // nextLocation.j = 15
     }
   }
 
